@@ -1,8 +1,8 @@
 # Docker deploy elasticsearch
 [![Build Status](https://ci-next.docker.com/public/buildStatus/icon?job=compose/master)](https://ci-next.docker.com/public/job/compose/job/master/)
 
-### Version Elasticsearch + Kibana: 7.0.2
-### Lastes version Docker 
+### - Version Elasticsearch + Kibana: 7.0.2
+### - Lastes version Docker 
 <div >
   <img src="https://miro.medium.com/max/2400/1*zvPL19PUTMslrhXPODj_Og.png" alt="My cool logo" width=18%/>
   
