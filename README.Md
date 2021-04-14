@@ -1,42 +1,37 @@
-# Docker run elasticsearch
-## Introduction Elasticsearch:
+# Docker deploy elasticsearch
+[![Build Status](https://ci-next.docker.com/public/buildStatus/icon?job=compose/master)](https://ci-next.docker.com/public/job/compose/job/master/)
 
+## Version Elasticsearch + Kibana: 7.0.2
+## Version Docker 
 <div >
   <img src="https://miro.medium.com/max/2400/1*zvPL19PUTMslrhXPODj_Og.png" alt="My cool logo" width=18%/>
   
-  <img src="https://raw.githubusercontent.com/tomchristie/uvicorn/master/docs/uvicorn.png" alt='uvicorn' width=14% />
+  <img src="https://steemitimages.com/1280x0/http://i.imgur.com/gkBnE8Z.png" alt='docker + elasticsearch deploy' width=14% />
 </div>
 
 ### * Prerequisites
 
 ### Before you continue, ensure you meet the following requirements:
-* You have installed the python3 recommend: python version 3.8.0 -> 3.8.7.
-* Use commandline on windows or terminal on macos and linux,...
+* You have installed the docker leasted version.
 ### Download elastic_python_request:
 ```php
-git clone https://github.com/typro33333/elastic_python_request.git
+git clone https://github.com/typro33333/docker-elasticsearch.git
 ```
 **Move to folder:**
 ```php
-cd elastic_python_request
+cd docker-elasticsearch
 ```
-**Create enviroment python package**
+**Look at file docker-compose.yml and click**
+**The data elasticsearch will store at volumes -> esdata -> driver_opts -> device: (you must change this dictory to your dictory)**
 ```php
-python3 -m venv env
+change this device: /Users/thinh/Desktop/elasticsearch/data
 ```
-**Go to enviroment python**
+**Then setting complete run it to deploy with cmd:**
 ```php
-source env/bin/activate
-leave activate: deactivate on cmd or terminal
+docker-compose up
 ```
-**Install package python**
-```php
-pip install -r requirements.txt
-```
-**Then run this api**
-```php
-python3 app.py or uvicorn app:app --reload
-```
-## Warning!!
-### Config file
--- Will uploaded 
+**Wait docker download image and deploy it will take 3 min for first deploy**
+**Elastic-search will have port 9200 (default) you can change it in file docker-compose.yml**
+**Kibana will have port 5600 (default) you can change it in file docker-compose.yml**
+### Read more docker-compose to setup to run multi node run faster 
+This document: <a href='https://github.com/docker/compose'>Docker-compose</a>
