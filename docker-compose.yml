@@ -18,20 +18,10 @@ services:
     ports:
       - "9200:9200"
     volumes:
-      - esdata:/usr/share/elasticsearch/data
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.12.1
-    networks: 
-      - elastic
-    ports:
-      - "5601:5601"
-
+      - esdata:/usr/share/de/data
 volumes:
   esdata:
-    driver_opts:
-      device: /Users/thinh/Desktop/elasticsearch/data
-      o: bind
-      type: none
+    driver: local
 
 networks: 
   elastic:

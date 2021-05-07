@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    use:
+        image: baristi000/use_serving:x64_x86
+        ports:
+            - 8501:8501
+        networks: 
+            - use
+networks: 
+    use:
+        driver: overlay
